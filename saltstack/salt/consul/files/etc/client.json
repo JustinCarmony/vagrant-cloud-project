@@ -1,9 +1,0 @@
-{
-    "bootstrap": true,
-    "server": true,
-    "datacenter": "nyc2",
-    "data_dir": "/var/consul",
-    "encrypt": "NyDr6UEJIuCorPtrmsWu4w==",
-    "log_level": "INFO",
-    "enable_syslog": true
-}

@@ -4,6 +4,8 @@ A template for creating vagrant based projects that provision in the cloud. This
 mostly for my projects where I'm learning how to setup clusters of servers and want
 to quickly tear down the project inbetween coding sessions.
 
+**Note: You will want to follow the instructions because a simple ``vagrant up`` won't completely work with setting up the hostnames correctly**
+
 ## Prerequisites 
 
 You will need the following:
@@ -30,12 +32,14 @@ git clone git@github.com:JustinCarmony/vagrant-cloud-project.git
 Once you've cloned it, you will need to copy ``config/prefs.example.rb`` 
 to ``config/prefs.rb`` and change the values inside the example config.
 
+### Step 2: Update ``config/prefs.rb``
+
 ```ruby
 # Copy this file to `config/prefs.rb`
 
 ## Digital Ocean Settings ##
 
-# Your API Token
+# Your API Token from https://cloud.digitalocean.com/settings/api/tokens
 $do_token       = 'abcdef0123456789abcdef0123456789abcdef0123456789abcdef0123456789'
 # Region Name
 $do_region      = 'nyc2'
@@ -47,5 +51,9 @@ $do_size        = '1gb'
 $do_ssh_key_name = 'Vagrant'
 ```
 
+__Note: I've only tested this with Ubuntu 14.04, if you have issues with other distros feel free to send a PR__
 
+
+
+### Step 2: Run ``fastSetup.sh``
 

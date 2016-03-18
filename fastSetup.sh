@@ -65,15 +65,4 @@ vagrant ssh salt -c "salt \\* state.highstate"
 echo "Servers Reporting in for Duty"
 vagrant ssh salt -c "salt \\* test.ping"
 
-
-
-## Project Specific setups ##
-
-bash bin/setupConsul.sh
-vagrant ssh salt -c "salt \\* service.restart docker"
-
-
-
-
-
-
+echo "All done"

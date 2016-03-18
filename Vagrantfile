@@ -39,19 +39,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
 
     srv.hostmanager.aliases = %w(salt)
   end
-
-  config.vm.define :master1 do |srv|
-    srv.vm.hostname = 'master1'
-    srv.vm.provision :shell, :inline => "bash /vagrant/deploy/install-salt-minion.sh master1"
-    srv.vm.box = "dummy"
-  end
-
-  config.vm.define :master2 do |srv|
-    srv.vm.hostname = 'master2'
-    srv.vm.provision :shell, :inline => "bash /vagrant/deploy/install-salt-minion.sh master2"
-    srv.vm.box = "dummy"
-  end
-
+  
   config.vm.define :node1 do |srv|
     srv.vm.hostname = 'node1'
     srv.vm.provision :shell, :inline => "bash /vagrant/deploy/install-salt-minion.sh node1"
